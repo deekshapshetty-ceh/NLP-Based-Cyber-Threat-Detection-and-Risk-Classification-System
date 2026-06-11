@@ -1,138 +1,243 @@
-# 🛡️ CyberWatch — NLP Cyber Threat Intelligence System
+🛡️ CyberWatch – NLP-Based Cyber Threat Detection & Risk Classification System
 
-> **Capstone Project** — Real-time cyber threat detection and classification
-> using NLP (TF-IDF) and Random Forest, served via an interactive Streamlit dashboard.
+Project Overview
+
+CyberWatch is an AI-powered Cyber Threat Intelligence System that automatically detects and classifies cybersecurity threats from textual data using Natural Language Processing (NLP) and Machine Learning.
+
+The system analyzes cyber-related content such as security reports, threat intelligence feeds, tweets, messages, PDFs, and extracted image text to identify potential threats and assess their risk level.
+
+The application is built using Streamlit and provides an interactive dashboard for real-time threat monitoring, analytics, bulk prediction, and explainable AI.
+
+
+🎯 Objectives
+
+* Detect cyber threats automatically from textual data.
+* Classify threats into predefined cybersecurity categories.
+* Assign risk levels based on threat severity.
+* Assist SOC analysts in threat monitoring and incident response.
+* Provide explainable AI insights for prediction transparency.
+
+
+🧠 Machine Learning Pipeline
+
+Input Text
+↓
+Text Preprocessing
+↓
+TF-IDF Vectorization (44,289 Features)
+↓
+Random Forest Classifier (100 Trees)
+↓
+Threat Classification
+↓
+Risk Assessment
+↓
+Interactive Dashboard Visualization
+
+🔍 Threat Categories
+
+| Threat Category | Risk Level | Description                                       |
+| --------------- | ---------- | ------------------------------------------------- |
+| Ransomware      | 🔴 High    | File encryption and extortion attacks             |
+| Leak            | 🔴 High    | Data breaches and credential leaks                |
+| 0-Day           | 🔴 High    | Zero-day vulnerability intelligence               |
+| DDoS            | 🟡 Medium  | Distributed denial-of-service attacks             |
+| Botnet          | 🟡 Medium  | Botnet activity and command-control communication |
+| Vulnerability   | 🟢 Low     | Known security weaknesses and CVEs                |
+| General         | 🟢 Low     | General cybersecurity discussions and news        |
+
+📊 Dataset Information
+
+* Dataset Size: 21,368 Records
+* Number of Threat Categories: 7
+* Feature Extraction Technique: TF-IDF
+* Feature Count: 44,289 Features
+* Machine Learning Model: Random Forest Classifier
+* Training Source: Cyber Threat Intelligence Dataset
+
+⚙️ Technologies Used
+
+Programming Language
+
+* Python
+
+Machine Learning & NLP
+
+* Scikit-Learn
+* TF-IDF Vectorization
+* Random Forest Classifier
+* SHAP Explainability
+
+Data Processing
+
+* Pandas
+* NumPy
+
+Visualization
+
+* Plotly
+* Matplotlib
+* Seaborn
+* WordCloud
+
+ Web Framework
+
+* Streamlit
+
+OCR & Document Processing
+
+* Pytesseract
+* Pillow
+* PyPDF
+
+✨ Key Features
+
+ Real-Time Threat Prediction
+
+* Single-text threat analysis
+* Confidence score generation
+* Risk-level classification
+
+ OCR-Based Threat Analysis
+
+* Extract text from uploaded images
+* Analyze screenshots and threat intelligence images
+
+ PDF Threat Analysis
+
+* Extract and classify text from PDF documents
+
+ Bulk Prediction
+
+* Upload CSV files
+* Analyze multiple threat records simultaneously
+
+Alert Center
+
+* Monitor high-risk threats
+* SOC-focused incident tracking
+
+ Analytics Dashboard
+
+* Threat distribution
+* Confidence analysis
+* Risk-level visualization
+
+Explainable AI
+
+* SHAP-based model interpretation
+* Feature importance visualization
+
+ Action Tracker
+
+* Track investigations
+* Manage incident response activities
 
 ---
+ 📂 Project Structure
 
-## 📁 Project Structure
-
-```
-cyber_threat_app/
-├── .gitignore                   # Excludes large binaries from git
-├── .streamlit/
-│   └── config.toml              # Streamlit dark theme configuration
-├── README.md                    # This file
-├── requirements.txt             # Python dependencies
-├── app.py                       # Main entry — Home / Dashboard page
+```text
+CyberWatch/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+│
 ├── config/
-│   ├── __init__.py
-│   ├── constants.py             # Risk maps, colors, icons, descriptions
-│   └── theme.py                 # CSS theme & reusable UI components
-├── utils/
-│   ├── __init__.py
-│   ├── classifier.py            # Model loading & text classification
-│   └── data_loader.py           # Dataset loading & statistics
-├── pages/
-│   ├── 1_Threat_Prediction.py   # Single-text threat analysis
-│   ├── 2_Alert_Center.py        # High-risk threat alerts
-│   ├── 3_Analytics.py           # Dashboard charts & analytics
-│   ├── 4_Dataset_Explorer.py    # EDA & visualizations
-│   ├── 5_Bulk_Prediction.py     # CSV batch classification
-│   ├── 6_Action_Tracker.py      # SOC task management
-│   ├── 7_Model_Performance.py   # Confusion matrix, ROC, PR curves
-│   ├── 8_Feature_Importance.py  # TF-IDF feature analysis
-│   └── 9_SHAP_Explainability.py # Model interpretability
-├── models/
-│   ├── attack_model.pkl         # Trained Random Forest classifier
-│   └── vectorizer.pkl           # TF-IDF vectorizer
+│   ├── constants.py
+│   └── theme.py
+│
 ├── data/
-│   └── tweets_final.csv         # Training / analysis dataset
-└── scripts/
-    └── twitter_monitor.py       # Optional live Twitter monitoring
+│   ├── tweets_final.csv
+│   ├── users.json
+│   └── action_tracker.json
+│
+├── models/
+│   ├── attack_model.pkl
+│   └── vectorizer.pkl
+│
+├── pages/
+│   ├── 1_Threat_Prediction.py
+│   ├── 2_Alert_Center.py
+│   ├── 3_Analytics.py
+│   ├── 4_Dataset_Explorer.py
+│   ├── 5_Bulk_Prediction.py
+│   ├── 6_Action_Tracker.py
+│   ├── 7_Model_Performance.py
+│   ├── 8_Feature_Importance.py
+│   └── 9_SHAP_Explainability.py
+│
+├── scripts/
+│   └── twitter_monitor.py
+│
+└── utils/
+    ├── classifier.py
+    └── data_loader.py
 ```
 
----
+- 🚀 Installation
 
-## 🚀 Quick Start
+Clone Repository
 
-### 1. Install dependencies
+```bash
+git clone https://github.com/deekshapshetty-ceh/NLP-Based-Cyber-Threat-Detection-and-Risk-Classification-System.git
+```
+
+Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run the dashboard
+Run Application
+
 ```bash
 streamlit run app.py
 ```
 
-### 3. Open in browser
-```
+Application will start at:
+
+```text
 http://localhost:8501
 ```
 
 ---
+📈 Dashboard Modules
 
-## 🧠 How It Works
-
-```
-Tweet / Text Input
-      ↓
-TF-IDF Vectorizer (44,289 features)
-      ↓
-Random Forest Classifier (100 trees)
-      ↓
-Threat Type: ransomware / ddos / leak / 0day / botnet / vulnerability
-      ↓
-Risk Level: HIGH / MEDIUM / LOW
-      ↓
-Dashboard Display + Alerts
-```
+| Module              | Purpose                         |
+| ------------------- | ------------------------------- |
+| Home Dashboard      | System overview and KPIs        |
+| Threat Prediction   | Real-time text classification   |
+| Alert Center        | High-risk threat monitoring     |
+| Analytics           | Charts and visual insights      |
+| Dataset Explorer    | Exploratory data analysis       |
+| Bulk Prediction     | CSV-based threat analysis       |
+| Action Tracker      | Incident response management    |
+| Model Performance   | Accuracy and evaluation metrics |
+| Feature Importance  | Top TF-IDF features             |
+| SHAP Explainability | Explain model decisions         |
 
 ---
 
-## 🎯 Threat Categories
+🔮 Future Enhancements
 
-| Category      | Risk Level | Description                           |
-|---------------|------------|---------------------------------------|
-| ransomware    | 🔴 HIGH    | Ransomware attacks & extortion        |
-| leak          | 🔴 HIGH    | Data breaches & credential leaks      |
-| 0day          | 🔴 HIGH    | Zero-day exploit intelligence         |
-| ddos          | 🟡 MEDIUM  | Distributed denial of service         |
-| botnet        | 🟡 MEDIUM  | Botnet infections & C2 activity       |
-| vulnerability | 🟢 LOW     | Known CVEs & security weaknesses      |
-| general       | 🟢 LOW     | General cyber-security news           |
+* BERT-based threat classification
+* Transformer models for improved accuracy
+* Real-time social media monitoring
+* Threat Intelligence API integration
+* SIEM integration
+* Multi-language threat detection
+* Cloud deployment and scaling
 
 ---
 
-## 📊 Dashboard Pages
+👩‍💻 Author
 
-| # | Page                  | Description                                    |
-|---|-----------------------|------------------------------------------------|
-| 1 | **Home**              | KPI overview, threat distribution, recent alerts |
-| 2 | **Threat Prediction** | Real-time single-text classification            |
-| 3 | **Alert Center**      | High-risk threats requiring SOC attention       |
-| 4 | **Analytics**         | Charts, risk breakdown, confidence histograms   |
-| 5 | **Dataset Explorer**  | EDA with word clouds and text-length analysis   |
-| 6 | **Bulk Prediction**   | CSV upload for batch classification             |
-| 7 | **Action Tracker**    | SOC incident response task management           |
-| 8 | **Model Performance** | Confusion matrix, ROC/PR curves, F1 scores     |
-| 9 | **Feature Importance**| Top TF-IDF features driving classifications     |
-| 10| **SHAP Explainability**| Global & local model interpretability          |
+Deeksha P Shetty
 
----
+Cyber Security | Machine Learning | Threat Intelligence
 
-## 🌐 Deployment (Streamlit Cloud)
+ 📜 License
+ This project was developed as an academic capstone project for educational and research purposes.
 
-1. Push this repo to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub repo
-4. Set **Main file path**: `app.py`
-5. Deploy!
-
-> **Note:** The model files (`models/*.pkl`) and dataset (`data/*.csv`) must be
-> included in the repo or managed via Git LFS for deployment.
-
----
-
-## 🔧 Troubleshooting
-
-| Problem | Solution |
-|---------|----------|
-| `ModuleNotFoundError` | Run `pip install -r requirements.txt` |
-| Port in use | `streamlit run app.py --server.port 8502` |
-| Model not found | Ensure `models/attack_model.pkl` exists |
-
----
-
-*Built with Streamlit · scikit-learn · TF-IDF · Random Forest · Plotly*
+This project was developed as an academic capstone project for educational and research purposes.
