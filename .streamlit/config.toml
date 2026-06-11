@@ -1,0 +1,21 @@
+[theme]
+primaryColor             = "#00d4ff"
+backgroundColor          = "#04080f"
+secondaryBackgroundColor = "#0a1220"
+textColor                = "#eef2fa"
+font                     = "sans serif"
+
+[server]
+headless              = true
+port                  = 8501
+enableStaticServing   = false
+
+[runner]
+# Allow st.markdown(unsafe_allow_html=True) to render HTML
+postScriptGC          = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

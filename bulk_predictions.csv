@@ -1,0 +1,6 @@
+Text,Threat Type,Risk Level,Confidence %
+New ransomware variant targets healthcare sector,RANSOMWARE,HIGH,83.0
+DDoS attack floods major ISP servers,DDOS,MEDIUM,83.0
+Critical zero-day found in popular CMS,GENERAL,LOW,59.0
+Data leaked from government database,GENERAL,LOW,86.0
+Botnet infects IoT devices worldwide,BOTNET,MEDIUM,75.0

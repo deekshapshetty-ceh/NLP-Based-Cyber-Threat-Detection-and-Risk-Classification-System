@@ -1,0 +1,27 @@
+{
+  "admin": {
+    "password": "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270",
+    "role": "Admin",
+    "email": "admin@cyberwatch.io"
+  },
+  "abc": {
+    "password": "36f583dd16f4e1e201eb1e6f6d8e35a2ccb3bbe2658de46b4ffae7b0e9ed872e",
+    "role": "Viewer",
+    "email": "abc@gmail.com"
+  },
+  "admin_new": {
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "Analyst",
+    "email": "admin@cyberwatch.com"
+  },
+  "analyst": {
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "Analyst",
+    "email": "analyst@example.com"
+  },
+  "analyst1": {
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "Analyst",
+    "email": "analyst1@cyberwatch.com"
+  }
+}

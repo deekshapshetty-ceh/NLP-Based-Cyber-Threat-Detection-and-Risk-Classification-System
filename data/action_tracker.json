@@ -1,0 +1,26 @@
+[
+  {
+    "Threat": "Alarm \n Kunde: CB_xLabor-DauerTest - myDatasens - GSM2 [HW1.4] \n Calibration = 1",
+    "Type": "0day",
+    "Owner": "SOC Lead",
+    "Priority": "Critical",
+    "Status": "Pending",
+    "Date": "2026-06-08"
+  },
+  {
+    "Threat": "Ransomware: Are you ready? https://t.co/Dm6a0UFg0V https://t.co/rUD9bT98Ke",
+    "Type": "ransomware",
+    "Owner": "SOC Lead",
+    "Priority": "Critical",
+    "Status": "Pending",
+    "Date": "2026-06-08"
+  },
+  {
+    "Threat": "admin",
+    "Type": "ransomware",
+    "Owner": "SOC Analyst",
+    "Priority": "Critical",
+    "Status": "Pending",
+    "Date": "2026-06-08"
+  }
+]
