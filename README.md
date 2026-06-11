@@ -238,6 +238,5 @@ Deeksha P Shetty
 Cyber Security | Machine Learning | Threat Intelligence
 
  📜 License
- This project was developed as an academic capstone project for educational and research purposes.
 
 This project was developed as an academic capstone project for educational and research purposes.
